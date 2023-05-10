@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- parallel="tests" or parallel="classes"-->
+<suite name="DELLDemo" parallel="none" thread-count="3">
+<!-- <parameter name="browserName" value="chrome"/> -->
+<!--<parameter name="URL" value="https://www.dell.com/en-au/outlet"/> -->
+<!-- <parameter name="URL" value="https://www.dell.com/zh-cn/outlet"/> -->
+<!-- <parameter name="URL" value="https://www.dell.com/de-de/outlet"/> -->
+ 
+ <listeners> 
+  <listener class-name="com.dell.listener.Itestlistener"/>
+  </listeners>
+  
+  
+  <test name="AULive">
+  <parameter name="browserName" value="chrome"/>
+  <!-- <groups>
+  <run>
+      <include name="begin"/> 
+  </run>
+  </groups> -->
+    <classes>
+      <class name="Maven_testng.dell_AU" />
+     <!-- <methods>
+            <include name="AUlivesite"/>
+            <include name="linkVerfications"/>
+            <include name="mainmenushover"/>
+            <include name="PLP"/>
+      </methods> -->
+    </classes>
+   </test> 
+  
+  
+  
+ <!--  <test name="CNLive">
+  <parameter name="browserName" value="chrome"/>
+  <classes>
+      <class name="Maven_testng.dell_CN"/>
+   </classes>
+  </test>  --> 
+  
+<!--   <test name="DELive">
+  <parameter name="browserName" value="chrome"/>
+  <classes>
+      <class name="Maven_testng.dell_DE"/>
+   </classes>
+  </test> 	 -->
+  
+  <!-- <test name="dell_test">
+  <parameter name="browserName" value="chrome"/>
+  <classes>
+      <class name="com.example.runner.CucumberRunnerTests"/>
+   </classes>
+  </test>  -->
+  
+</suite> 

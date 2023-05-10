@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-DELLDemo" class="navigator-link">
+              <span class="suite-name border-failed">DELLDemo</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-DELLDemo" class="navigator-link ">
+                    <span>C:\Thesigan\Selenium\Dell_project\src\test\resources\mobile.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-DELLDemo" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-DELLDemo" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-DELLDemo" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-DELLDemo" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-DELLDemo" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-DELLDemo" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-DELLDemo" class="hide-methods failed suite-DELLDemo"> (hide)</a> <!-- hide-methods failed suite-DELLDemo -->
+                      <a href="#" panel-name="suite-DELLDemo" class="show-methods failed suite-DELLDemo"> (show)</a> <!-- show-methods failed suite-DELLDemo -->
+                    </span>
+                    <div class="method-list-content failed suite-DELLDemo">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DELLDemo" title="com.mobile_first.Mobile_first_CN" class="method navigator-link" hash-for-method="Myaccountactivities">Myaccountactivities</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-DELLDemo -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-DELLDemo" class="hide-methods passed suite-DELLDemo"> (hide)</a> <!-- hide-methods passed suite-DELLDemo -->
+                      <a href="#" panel-name="suite-DELLDemo" class="show-methods passed suite-DELLDemo"> (show)</a> <!-- show-methods passed suite-DELLDemo -->
+                    </span>
+                    <div class="method-list-content passed suite-DELLDemo">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DELLDemo" title="com.mobile_first.Mobile_first_CN" class="method navigator-link" hash-for-method="CheckoutandPaymentGuest">CheckoutandPaymentGuest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DELLDemo" title="com.mobile_first.Mobile_first_CN" class="method navigator-link" hash-for-method="CheckoutandPaymentlogged">CheckoutandPaymentlogged</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DELLDemo" title="com.mobile_first.Mobile_first_CN" class="method navigator-link" hash-for-method="Footermenus">Footermenus</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DELLDemo" title="com.mobile_first.Mobile_first_CN" class="method navigator-link" hash-for-method="Headermenus">Headermenus</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DELLDemo" title="com.mobile_first.Mobile_first_CN" class="method navigator-link" hash-for-method="Homepage(https://www.dell.com/zh-cn/outlet)">Homepage(https://www.dell.com/zh-cn/outlet)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DELLDemo" title="com.mobile_first.Mobile_first_CN" class="method navigator-link" hash-for-method="PDPwithSearch">PDPwithSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DELLDemo" title="com.mobile_first.Mobile_first_CN" class="method navigator-link" hash-for-method="PLPwithCart">PLPwithCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-DELLDemo -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-DELLDemo" class="panel DELLDemo">
+          <div class="suite-DELLDemo-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.mobile_first.Mobile_first_CN</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Myaccountactivities">
+                  </a> <!-- Myaccountactivities -->
+                  <span class="method-name">Myaccountactivities</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.8.2&apos;, revision: &apos;826dbfc730&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [c2cc05393b9b03665a01f430a188891fa915632e, findElement {using=xpath, value=//*[contains(@class,&apos;modal__button--close&apos;)]}]
+Capabilities {64bit: false, acceptSslCert: false, acceptSslCerts: false, appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, browser: chrome_android, browserName: chrome, browser_name: chrome, browserstack.appium_version: 1.17.0, browserstack.is_hub_canary: false, capabilities: {64bit: false, acceptSslCert: false, acceptSslCerts: false, appActivity: com.google.android.apps.chr..., appPackage: com.android.chrome, browser: chrome_android, browserName: chrome, browser_name: chrome, browserstack.appium_version: 1.17.0, browserstack.is_hub_canary: false, chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., test-type, --proxy-server=http://103.2..., --disable-features=Translate], w3c: false}, chromedriverPort: 18084, databaseEnabled: false, detected_language: selenium/4.8.2 (java windows), device: OnePlus 9, deviceApiLevel: 30, deviceManufacturer: OnePlus, deviceModel: LE2111, deviceName: 4692bef7, deviceOrientation: portrait, deviceScreenDensity: 450, deviceScreenSize: 1080x2400, deviceUDID: 4692bef7, enablePerformanceLogging: false, javascriptEnabled: true, locationContextEnabled: false, loggingPrefs: {browser: SEVERE}, mobile: {browser: mobile, version: OnePlus 9-11.0}, networkConnectionEnabled: true, newCommandTimeout: 0, new_bucketing: true, orientation: PORTRAIT, orig_os: android, osVersion: 11.0, os_version: 11.0, pixelRatio: 2.8125, platform: ANDROID, platformName: Android, platformVersion: 11, realMobile: true, sessionId: c2cc05393b9b03665a01f430a18..., skipServerInstallation: true, statBarHeight: 104, systemPort: 8204, takesScreenshot: true, udid: 4692bef7, version: , viewportRect: {height: 2058, left: 0, top: 104, width: 1080}, warnings: {}, webStorageEnabled: false}, chromeOptions: {args: [--proxy-bypass-list=&lt;-loopb..., test-type, --proxy-server=http://103.2..., --disable-features=Translate], w3c: false}, chromedriverPort: 18084, databaseEnabled: false, detected_language: selenium/4.8.2 (java windows), device: OnePlus 9, deviceApiLevel: 30, deviceManufacturer: OnePlus, deviceModel: LE2111, deviceName: 4692bef7, deviceOrientation: portrait, deviceScreenDensity: 450, deviceScreenSize: 1080x2400, deviceUDID: 4692bef7, enablePerformanceLogging: false, javascriptEnabled: true, locationContextEnabled: false, loggingPrefs: org.openqa.selenium.logging..., mobile: {browser: mobile, version: OnePlus 9-11.0}, networkConnectionEnabled: true, newCommandTimeout: 0, new_bucketing: true, orientation: PORTRAIT, orig_os: android, osVersion: 11.0, os_version: 11.0, pixelRatio: 2.8125, platform: ANDROID, platformName: ANDROID, platformVersion: 11, realMobile: true, sessionId: c2cc05393b9b03665a01f430a18..., skipServerInstallation: true, statBarHeight: 104, systemPort: 8204, takesScreenshot: true, udid: 4692bef7, version: , viewportRect: {height: 2058, left: 0, top: 104, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: c2cc05393b9b03665a01f430a188891fa915632e
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:217)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:169)
+	at org.openqa.selenium.remote.codec.jwp.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:41)
+	at org.openqa.selenium.remote.codec.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:83)
+	at org.openqa.selenium.remote.codec.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:47)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at com.mobile_first.wrapper_mobile.clickwithoutscroll(wrapper_mobile.java:322)
+	at com.mobile_first.Mobile_first_CN.Myaccountactivities(Mobile_first_CN.java:591)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-DELLDemo-class-failed -->
+          <div class="suite-DELLDemo-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.mobile_first.Mobile_first_CN</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckoutandPaymentGuest">
+                  </a> <!-- CheckoutandPaymentGuest -->
+                  <span class="method-name">CheckoutandPaymentGuest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckoutandPaymentlogged">
+                  </a> <!-- CheckoutandPaymentlogged -->
+                  <span class="method-name">CheckoutandPaymentlogged</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Footermenus">
+                  </a> <!-- Footermenus -->
+                  <span class="method-name">Footermenus</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Headermenus">
+                  </a> <!-- Headermenus -->
+                  <span class="method-name">Headermenus</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Homepage(https://www.dell.com/zh-cn/outlet)">
+                  </a> <!-- Homepage(https://www.dell.com/zh-cn/outlet) -->
+                  <span class="method-name">Homepage</span>
+                  <span class="parameters">(https://www.dell.com/zh-cn/outlet)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PDPwithSearch">
+                  </a> <!-- PDPwithSearch -->
+                  <span class="method-name">PDPwithSearch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PLPwithCart">
+                  </a> <!-- PLPwithCart -->
+                  <span class="method-name">PLPwithCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-DELLDemo-class-passed -->
+        </div> <!-- panel DELLDemo -->
+        <div panel-name="test-xml-DELLDemo" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Thesigan\Selenium\Dell_project\src\test\resources\mobile.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; name=&quot;DELLDemo&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.dell.listener.Itestlistener_mobile&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;CNMobile&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.mobile_first.Mobile_first_CN&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CNMobile --&gt;
+&lt;/suite&gt; &lt;!-- DELLDemo --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-DELLDemo" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for DELLDemo</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">CNMobile (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-DELLDemo" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for DELLDemo</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-DELLDemo" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for DELLDemo</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_DELLDemo');
+function tableData_DELLDemo() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(8);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'Headermenus')
+data.setCell(0, 2, 'com.mobile_first.Mobile_first_CN')
+data.setCell(0, 3, 210239);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Homepage')
+data.setCell(1, 2, 'com.mobile_first.Mobile_first_CN')
+data.setCell(1, 3, 187354);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'PLPwithCart')
+data.setCell(2, 2, 'com.mobile_first.Mobile_first_CN')
+data.setCell(2, 3, 123587);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Myaccountactivities')
+data.setCell(3, 2, 'com.mobile_first.Mobile_first_CN')
+data.setCell(3, 3, 111555);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'CheckoutandPaymentlogged')
+data.setCell(4, 2, 'com.mobile_first.Mobile_first_CN')
+data.setCell(4, 3, 107176);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'PDPwithSearch')
+data.setCell(5, 2, 'com.mobile_first.Mobile_first_CN')
+data.setCell(5, 3, 107043);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'CheckoutandPaymentGuest')
+data.setCell(6, 2, 'com.mobile_first.Mobile_first_CN')
+data.setCell(6, 3, 51952);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'Footermenus')
+data.setCell(7, 2, 'com.mobile_first.Mobile_first_CN')
+data.setCell(7, 3, 37766);
+window.suiteTableData['DELLDemo']= { tableData: data, tableDiv: 'times-div-DELLDemo'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 15 minutes</span>
+              <div id="times-div-DELLDemo">
+              </div> <!-- times-div-DELLDemo -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-DELLDemo" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for DELLDemo</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-DELLDemo" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-DELLDemo" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.mobile_first.Mobile_first_CN</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">properties</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-test before">
+                <span class="method-name">start</span>
+                <span class="method-start">688 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Homepage(https://www.dell.com/zh-cn/outlet)</span>
+                <span class="method-start">21250 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">checkstatus(public void com.mobile_first.Mobile_first_CN.Homepage(java.lang.String) throws java.lang.Exception, ...)</span>
+                <span class="method-start">208610 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">Footermenus</span>
+                <span class="method-start">209772 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">checkstatus(public void com.mobile_first.Mobile_first_CN.Footermenus() throws java.lang.Exception, [TestResult n...)</span>
+                <span class="method-start">247541 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">Headermenus</span>
+                <span class="method-start">248314 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">checkstatus(public void com.mobile_first.Mobile_first_CN.Headermenus() throws java.lang.Exception, [TestResult n...)</span>
+                <span class="method-start">458562 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">PLPwithCart</span>
+                <span class="method-start">459380 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">checkstatus(public void com.mobile_first.Mobile_first_CN.PLPwithCart() throws java.lang.Exception, [TestResult n...)</span>
+                <span class="method-start">582974 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">PDPwithSearch</span>
+                <span class="method-start">583892 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">checkstatus(public void com.mobile_first.Mobile_first_CN.PDPwithSearch() throws java.lang.Exception, [TestResult...)</span>
+                <span class="method-start">690938 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">CheckoutandPaymentGuest</span>
+                <span class="method-start">691861 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">checkstatus(public void com.mobile_first.Mobile_first_CN.CheckoutandPaymentGuest() throws java.lang.Exception, [...)</span>
+                <span class="method-start">743817 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">CheckoutandPaymentlogged</span>
+                <span class="method-start">745095 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">checkstatus(public void com.mobile_first.Mobile_first_CN.CheckoutandPaymentlogged() throws java.lang.Exception, ...)</span>
+                <span class="method-start">852282 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Myaccountactivities</span>
+                <span class="method-start">853871 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">checkstatus(public void com.mobile_first.Mobile_first_CN.Myaccountactivities() throws java.lang.Exception, [Test...)</span>
+                <span class="method-start">965477 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">end</span>
+                <span class="method-start">988430 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
