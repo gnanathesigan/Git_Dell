@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
 
@@ -21,6 +22,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -97,11 +99,21 @@ public class wrapper_mobile {
     @BeforeTest  
     public void start() throws Exception
     {
-	DesiredCapabilities cap = new DesiredCapabilities();
-	cap.setCapability("deviceName", "OnePlus 9");
-	cap.setCapability("osVersion", "11.0");
+//	DesiredCapabilities cap = new DesiredCapabilities();
+//	cap.setCapability("deviceName", "OnePlus 9");
+//	cap.setCapability("osVersion", "11.0");
+//	cap.setCapability("browserName", "chrome");
+//	cap.setCapability("deviceOrientation", "portrait");
+	
+	MutableCapabilities cap= new MutableCapabilities();
 	cap.setCapability("browserName", "chrome");
-	cap.setCapability("deviceOrientation", "portrait");
+	HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
+	browserstackOptions.put("osVersion", "11.0");
+	browserstackOptions.put("deviceName", "OnePlus 9");
+	browserstackOptions.put("deviceOrientation", "portrait");
+	cap.setCapability("bstack:options", browserstackOptions);
+	
+//https://www.browserstack.com/automate/capabilities
 	
 //	cap.setCapability("deviceName", "iPhone 14 Pro Max");
 //	cap.setCapability("osVersion", "16");
