@@ -26,7 +26,7 @@
           <configuration>
 			  <suiteXmlFiles>
 				  <suiteXmlFile>Cucumbertestng.xml</suiteXmlFile>
-				  <!--<suiteXmlFile>NewFile.xml</suiteXmlFile>->
+				  <!--<suiteXmlFile>NewFile.xml</suiteXmlFile>-->
 				  <!-- <suiteXmlFile>mobile.xml</suiteXmlFile>-->
 			  </suiteXmlFiles>
 		  </configuration>
