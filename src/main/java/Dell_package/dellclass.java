@@ -7,7 +7,7 @@ public class dellclass {
 	{
 		System.out.println("test1");
 		
-		
+	
 	}
 	
 }
