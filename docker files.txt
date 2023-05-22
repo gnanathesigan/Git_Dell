@@ -1,0 +1,20 @@
+Docker Related Comments : (Practical)
+
+1. First RUN the Maven for your java selenium code. (mvn install). So the JAR file created in your local.
+
+2. <build>
+  <finalName>my-maven-docker-project</finalName>
+</build>                                                   ---> Set the JAR File name in POM File. After RUN the maven the JAR file will be created with this name.
+
+3. docker build -t my-maven-docker-project .   --> This command use to create the docker Image using your docker File in local.
+
+4. docker run -p 8080:8080 my-maven-docker-project.jar  --> This Command use to create the Docker Container using your JAR file.
+
+// Reference Site  --> https://www.educative.io/answers/how-do-you-dockerize-a-maven-project
+
+
+
+5. docker tag {{DockerImageName}} {{Hub_Name}}/{{DockerImageName}}  --> This command use to create the tag and respoitary on HUB.
+
+6. docker push {{Hub_Name}}/{{DockerImageName}}    --> This command use to push your local Image to HUB. So every one can see your Image on Cloud and download and Use it.
+
