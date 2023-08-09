@@ -11,6 +11,6 @@
     <classes>
       <class name="com.example.runner.CucumberRunnerTests"/>
     </classes>
-   </test> 
+   </test>
    
 </suite>

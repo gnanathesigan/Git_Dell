@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -28,10 +29,12 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -69,8 +72,8 @@ public class wrapper_mobile {
     public static Properties values=null;
     public static Logger Log = Logger.getLogger(wrapper_mobile.class.getName());
     
-    public static final String Username = "ganesangopal3";
-    public static final String Accesskey = "zhE2AYmymgvZBwjLdE3k";
+    public static final String Username = "dineshj4";
+    public static final String Accesskey = "YgGTZALT3VC5PgQPFNex";
     public static final String URL = "https://"+Username+":"+Accesskey+"@hub-cloud.browserstack.com/wd/hub";
 
     
@@ -99,29 +102,31 @@ public class wrapper_mobile {
     @BeforeTest  
     public void start() throws Exception
     {
-//	DesiredCapabilities cap = new DesiredCapabilities();
-//	cap.setCapability("deviceName", "OnePlus 9");
-//	cap.setCapability("osVersion", "11.0");
-//	cap.setCapability("browserName", "chrome");
-//	cap.setCapability("deviceOrientation", "portrait");
-	
-	MutableCapabilities cap= new MutableCapabilities();
-	cap.setCapability("browserName", "chrome");
-	HashMap<String, Object> browserstackOptions = new HashMap<String, Object>();
-	browserstackOptions.put("osVersion", "11.0");
-	browserstackOptions.put("deviceName", "OnePlus 9");
-	browserstackOptions.put("deviceOrientation", "portrait");
-	cap.setCapability("bstack:options", browserstackOptions);
-	
+
+	  MutableCapabilities cap= new MutableCapabilities(); 
+	  cap.setCapability("browserName", "Chrome"); 
+	  HashMap<String, Object> browserstackOptions = new HashMap<String, Object>(); 
+	  browserstackOptions.put("osVersion", "11.0"); 
+	  browserstackOptions.put("deviceName", "OnePlus 9"); 
+	  browserstackOptions.put("deviceOrientation", "portrait"); 
+	  cap.setCapability("bstack:options", browserstackOptions);
+	  driver = new RemoteWebDriver(new URL(URL), cap);
+
+
 //https://www.browserstack.com/automate/capabilities
 	
-//	cap.setCapability("deviceName", "iPhone 14 Pro Max");
-//	cap.setCapability("osVersion", "16");
-//	cap.setCapability("browserName", "safari");
-//	cap.setCapability("deviceOrientation", "portrait");
 	
-	driver = new RemoteWebDriver(new URL(URL), cap);
-       
+	
+	
+
+//	Map<String, String> mobileemulate = new HashMap<String, String>();
+//	mobileemulate.put("deviceName", "iPhone SE");
+//	
+//	Map<String, Object> mobileemulate1 = new HashMap<String, Object>();
+//	mobileemulate1.put("mobileEmulation", mobileemulate);
+	
+	
+	
     }
     
     public void loadingurl(String url) {

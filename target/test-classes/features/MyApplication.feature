@@ -1,18 +1,18 @@
 
-Feature: Test the AU DELL SITE
+Feature: Test the AU and CN DELL SITE
 
 @AUtest
   Scenario Outline: Test AU Dell Site checking
     Given Open Chrome and load the url of "<ausite>"
     When checking the all plp and checking broken pages.
-    #Then mousehover on the mainmenu section.
-    #Given checking the PLP functionalities "name"
-    #When verify the warranty page and product details.
-    #Then checking the cart functionalities.
-    #Given checking the search page functionalities.
-    #When checking the PDP functionalities.
-    #And checking the Checkout guest functionalities values are "gnanathesigan1@gmail.com" and "FirstName" and "LastName" and "Address" and "City" and "1234" and "Ameex" and "8940928635" and "570"
-    #Then checking the Checkout login functionalities values are "Address" and "City" and "1234" and "Ameex" and "8940928635" and "570"
+    Then mousehover on the mainmenu section.
+    Given checking the PLP functionalities "name"
+    When verify the warranty page and product details.
+    Then checking the cart functionalities.
+    Given checking the search page functionalities.
+    When checking the PDP functionalities.
+    And checking the Checkout guest functionalities values are "gnanathesigan1@gmail.com" and "FirstName" and "LastName" and "Address" and "City" and "1234" and "Ameex" and "8940928635" and "570"
+    Then checking the Checkout login functionalities values are "Address" and "City" and "1234" and "Ameex" and "8940928635" and "570"
     
     
      Examples: 
