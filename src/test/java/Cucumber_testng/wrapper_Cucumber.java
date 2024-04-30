@@ -258,6 +258,13 @@ public class wrapper_Cucumber {
  	   element.click();
  	}
  	
+ 	public void javascriptvaluepass()
+ 	{
+
+ 	  ((JavascriptExecutor) driver).executeScript("document.getElementById('payment-cpf-field').value='766.454.255-38'"); 
+ 	 
+ 	}
+ 	
  	public void clickwithoutscroll(String locator)
  	{
  	   WebElement element = driver.findElement(By.xpath(locator));
@@ -335,6 +342,38 @@ public class wrapper_Cucumber {
 			case "classname":
 				drpdwngender = new Select(driver.findElement(By.className(locator)));
 				drpdwngender.selectByValue(index);
+				break;
+			default: {
+				System.out.println("Mismatched Category");
+			}
+
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+ 	
+ 	public void selectDropdownByIndex(String category, String locator, int index) {
+
+		Select drpdwngender;
+
+		try {
+			switch (category.toLowerCase()) {
+			case "id":
+				drpdwngender = new Select(driver.findElement(By.id(locator)));
+				drpdwngender.selectByIndex(index);
+			case "name":
+				drpdwngender = new Select(driver.findElement(By.name(locator)));
+				drpdwngender.selectByIndex(index);
+				break;
+			case "xpath":
+				drpdwngender = new Select(driver.findElement(By.xpath(locator)));
+				drpdwngender.selectByIndex(index);
+				break;
+			case "classname":
+				drpdwngender = new Select(driver.findElement(By.className(locator)));
+				drpdwngender.selectByIndex(index);
 				break;
 			default: {
 				System.out.println("Mismatched Category");

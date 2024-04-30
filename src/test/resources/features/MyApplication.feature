@@ -34,10 +34,17 @@ Feature: Test the AU and CN DELL SITE
     And checking the china Checkout guest functionalities values are "gnanathesigan1@gmail.com" and "FirstName" and "LastName" and "Address" and "City" and "123456" and "8940928635" and "621" and "test invoice"
     Then checking the china Checkout login functionalities values are "Address" and "City" and "123456" and "8940928635" and "621" and "test invoice"
     
-    
      Examples: 
       | cnsite                              |
-      | https://www.dell.com/zh-cn/outlet/   |      
+      | https://dell.com/zh-cn/outlet       |          
     
 
-   
+@BRtest
+  Scenario Outline: Test BR Dell site checking
+  Given Open Chrome and load the brazil url of "<brsite>"
+  When checking the all brazil plp and checking broken pages.
+  
+  
+  Examples: 
+      | brsite                              |
+      | https://dell.com/pt-br/outlet       |

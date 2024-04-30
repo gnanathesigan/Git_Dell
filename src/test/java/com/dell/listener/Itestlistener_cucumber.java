@@ -34,7 +34,6 @@ public class Itestlistener_cucumber extends wrapper_Cucumber implements ITestLis
 
     @Override
     public void onTestFailure(ITestResult result) {
-	System.out.println("onTestFailure");
 	ITestListener.super.onTestFailure(result);
 	//screenshots(result.getName());
     }

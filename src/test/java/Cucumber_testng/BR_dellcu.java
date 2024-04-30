@@ -1,69 +1,41 @@
 package Cucumber_testng;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.Assert;
-import org.testng.ITestContext;
-import org.testng.ITestResult;
-import org.testng.annotations.Test;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import wrapper_Package.wrapper_Class;
 
-public class CN_dellcu extends wrapper_Cucumber{
-    
-   // private static WebDriver driver;
-    //public final static int TIMEOUT = 10;
-    
-    String actualpriceinplp ="";
-    String actualproducttitleinplp ="";
-    
-    String actualwarrantyname="";
-    String expectedwarrantynameincart="";
-   
-//    @Before
-//    public void setUp() throws Exception {
-//	elements = new Properties();
-//        FileInputStream ele = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\resources\\elements.Properties");
-//	elements.load(ele);
-// 
-//        WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
-//        driver.manage().window().maximize();
-//        
-//        
-//    }
-//    
-    @Given("^Open Chrome and load the china url of \"(.*?)\"$")
+public class BR_dellcu extends wrapper_Cucumber {
+	
+	 String actualpriceinplp ="";
+	 String actualproducttitleinplp ="";
+	    
+	 String actualwarrantyname="";
+	 String expectedwarrantynameincart="";
+	 
+	 
+	
+	@Given("^Open Chrome and load the brazil url of \"(.*?)\"$")
     public void testlive(String url) throws Exception
     {
 	 loadingurl(url);
-	    Log.info("CN Home Page");
+	   // Log.info("BR Home Page");
     }
-    
-    @When("^checking the all china plp and checking broken pages.$")
+	
+	@When("^checking the all brazil plp and checking broken pages.$")
     public void linkVerfications() throws Exception
     {
 	List<String> mainlinks=new ArrayList<String>();
@@ -95,15 +67,14 @@ public class CN_dellcu extends wrapper_Cucumber{
     }
 
 
-    @Then("^mousehover on the mainmenu section in china.$")
+    @Then("^mousehover on the mainmenu section in brazil.$")
     public void mainmenushover() throws Exception
     { 
 	clickelement("xpath",elements.getProperty("logo"));
 	mousehover(elements.getProperty("mainmenu"));
     	  
     }
-
-    @Given("^checking the china PLP functionalities \"(.*?)\"$")
+    @Given("^checking the brazil PLP functionalities \"(.*?)\"$")
     public void PLP(String name) throws Exception
     { 
 	    clickelement("xpath",elements.getProperty("laptopmenu"));
@@ -161,7 +132,7 @@ public class CN_dellcu extends wrapper_Cucumber{
 	    
     }
 
-    @When("^verify the china warranty page and product details.$")
+    @When("^verify the brazil warranty page and product details.$")
     public void warrantypage() throws Exception
     { 
 	String url = driver.getCurrentUrl();
@@ -208,7 +179,7 @@ public class CN_dellcu extends wrapper_Cucumber{
 	    
     }
     
-    @Then("^checking the china cart functionalities.$")
+    @Then("^checking the brazil cart functionalities.$")
     public void cartpage() throws Exception
     { 
 //	    String producttitlecart=getinnertext(elements.getProperty("producttitlecart"));
@@ -226,7 +197,7 @@ public class CN_dellcu extends wrapper_Cucumber{
 	    elementintercept(elements.getProperty("specificationcart"));
 	    scrollintoview(elements.getProperty("producttitlecart"));
 	    screenshots("Product Name in CartPage");
-	    expectedwarrantynameincart=getinnertext(elements.getProperty("warrantyincart"));
+	    expectedwarrantynameincart=getinnertext(elements.getProperty("brwarrantyincart"));
 	    System.out.println("CartPage --> " + expectedwarrantynameincart);
 	    
 	    try
@@ -257,11 +228,11 @@ public class CN_dellcu extends wrapper_Cucumber{
         
     }
 
-    @Given("^checking the china search page functionalities.$")
+    @Given("^checking the brazil search page functionalities.$")
     public void searchpage() throws Exception
     { 
 	    clickelement("xpath",elements.getProperty("searchbox"));
-	    enterValue("xpath",elements.getProperty("searchbox"),"台式机");
+	    enterValue("xpath",elements.getProperty("searchbox"),"inspiron");
 	    clickelement("xpath",elements.getProperty("searchbutton"));
 	    explicitywait(50,"xpath",elements.getProperty("firstcategory"));
 	    screenshots("Search Page");
@@ -272,7 +243,7 @@ public class CN_dellcu extends wrapper_Cucumber{
 	    explicitywaitfoelementclick(50,"xpath",elements.getProperty("addtocart"));
     }
 
-    @When("^checking the china PDP functionalities.$")
+    @When("^checking the brazil PDP functionalities.$")
     public void PDP() throws Exception
     { 
 	    clickelement("xpath",elements.getProperty("addtocart"));
@@ -302,8 +273,8 @@ public class CN_dellcu extends wrapper_Cucumber{
 	    
     }
 
-    @And("^checking the china Checkout guest functionalities values are \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\"$")
-    public void checkoutguest(String email, String fname, String lname, String address, String City, String zipcode, String phone, String state, String invoice) throws Exception
+    @And("^checking the brazil Checkout guest functionalities values are \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\"$")
+    public void checkoutguest(String email, String fname, String mname, String lname, String address, String number, String complement, String neightborhood, String City, String state, String zipcode, String phone, int installment) throws Exception
     { 
 	    waiting(10000);
 	    clickelement("xpath",elements.getProperty("emailaddressfield"));
@@ -315,12 +286,17 @@ public class CN_dellcu extends wrapper_Cucumber{
 	    clickelement("xpath",elements.getProperty("guestcheckbox"));
 	    
 	    enterValue("xpath",elements.getProperty("firstname"),fname);
-	   // enterValue("xpath",elements.getProperty("lastname"),lname);
+	    enterValue("xpath",elements.getProperty("middlename"),mname);
+	    enterValue("xpath",elements.getProperty("lastname"),lname);
 	    enterValue("xpath",elements.getProperty("streetaddress"),address);
+	    enterValue("xpath",elements.getProperty("Numero"),number);
+	    enterValue("xpath",elements.getProperty("Complemento"),complement);
+	    enterValue("xpath",elements.getProperty("Bairro"),neightborhood);
 	    enterValue("xpath",elements.getProperty("city"),City);
-	    //enterValue("xpath",elements.getProperty("zipcode"),zipcode);
-	    enterValue("xpath",elements.getProperty("phonenumber"),phone);
 	    selectDropdownByValue("xpath",elements.getProperty("state"),state);
+	    enterValue("xpath",elements.getProperty("zipcode"),zipcode);
+	    enterValue("xpath",elements.getProperty("phonenumber"),phone);
+	    
 	    
 	    scrollintoview(elements.getProperty("emailaddresslabel"));
 	    screenshots("Shipping Address");
@@ -331,7 +307,7 @@ public class CN_dellcu extends wrapper_Cucumber{
 	    
 	    String producttitlecheckout=getinnertext(elements.getProperty("producttitlecheckout"));
 	    System.out.println(producttitlecheckout);
-	    String warrantycheckout=getinnertext(elements.getProperty("warrantycheckout"));
+	    String warrantycheckout=getinnertext(elements.getProperty("brwarrantycheckout"));
 	    System.out.println(warrantycheckout);
 	    
 	    
@@ -345,13 +321,15 @@ public class CN_dellcu extends wrapper_Cucumber{
 		e.printStackTrace();
 	    }
 	    //elementintercept(elements.getProperty("chinaiovoice"));
-	    waiting(12000);
-	    enterValue("xpath",elements.getProperty("chinaiovoice"),invoice);
 	    waiting(5000);
+	    javascriptvaluepass();
+	    waiting(3000);
+	    selectDropdownByIndex("xpath",elements.getProperty("installment"),installment);
+	    waiting(3000);
 	    clickelement("xpath",elements.getProperty("deliverycheckbox"));
-	    clickelement("xpath",elements.getProperty("paymenttermcheckbox"));
-	    clickelement("xpath",elements.getProperty("agreecheckbox"));
-	    
+	    clickelement("xpath",elements.getProperty("brtermcheckbox"));
+	    clickelement("xpath",elements.getProperty("emailcheckbox"));
+	    clickelement("xpath",elements.getProperty("phonecheckbox"));
 	    //checkboxenable(elements.getProperty("billingsame"));
 	    
 	    screenshots("Complete Chekout");
@@ -360,8 +338,8 @@ public class CN_dellcu extends wrapper_Cucumber{
 	    explicitywait(50,"xpath",elements.getProperty("paymentprice"));
     }
 
-    @Then("^checking the china Checkout login functionalities values are \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\"$")
-    public void checkoutlogin(String address, String City, String zipcode, String phone, String state, String invoice) throws Exception
+    @Then("^checking the brazil Checkout login functionalities values are \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\" and \"(.*?)\"$")
+    public void checkoutlogin(String address, String number, String complement, String neightborhood, String City, String state, String zipcode, String phone, int installment) throws Exception
     { 
 	    //waiting(10000);
 	    goback();
@@ -385,7 +363,7 @@ public class CN_dellcu extends wrapper_Cucumber{
 	    enterValue("xpath",elements.getProperty("signinemail"),values.getProperty("exisitingmail"));
 	    clickelement("xpath",elements.getProperty("signinpassword"));
 	    enterValue("xpath",elements.getProperty("signinpassword"),values.getProperty("password"));
-	    //waiting(30000);
+	    waiting(20000);
 	    clickelement("xpath",elements.getProperty("signinbutton"));
 	    explicitywait(50,"xpath",elements.getProperty("manageoption"));
 	    
@@ -420,18 +398,24 @@ public class CN_dellcu extends wrapper_Cucumber{
 	    elementintercept(elements.getProperty("newaddcheckout"));
 	    waiting(2000);
 	    enterValue("xpath",elements.getProperty("streetaddress"),address);
+	    enterValue("xpath",elements.getProperty("Numero"),number);
+	    enterValue("xpath",elements.getProperty("Complemento"),complement);
+	    enterValue("xpath",elements.getProperty("Bairro"),neightborhood);
 	    enterValue("xpath",elements.getProperty("city"),City);
-	    //enterValue("xpath",elements.getProperty("zipcode"),zipcode);
-	    enterValue("xpath",elements.getProperty("phonenumber"),phone);
 	    selectDropdownByValue("xpath",elements.getProperty("state"),state);
+	    enterValue("xpath",elements.getProperty("zipcode"),zipcode);
+	    enterValue("xpath",elements.getProperty("phonenumber"),phone);
 	    clickelement("xpath",elements.getProperty("newsavecheckout"));
 	    waiting(5000);
 	    
-	   // elementintercept(elements.getProperty("chinaiovoice"));
-	    enterValue("xpath",elements.getProperty("chinaiovoice"),invoice);
+	    javascriptvaluepass();
+	    waiting(3000);
+	    selectDropdownByIndex("xpath",elements.getProperty("installment"),installment);
+	    waiting(3000);
 	    clickelement("xpath",elements.getProperty("deliverycheckbox"));
-	    clickelement("xpath",elements.getProperty("paymenttermcheckbox"));
-	    clickelement("xpath",elements.getProperty("agreecheckbox"));
+	    clickelement("xpath",elements.getProperty("brtermcheckbox"));
+	    clickelement("xpath",elements.getProperty("emailcheckbox"));
+	    clickelement("xpath",elements.getProperty("phonecheckbox"));
 	   
 	   // checkboxenable(elements.getProperty("billingsame"));
 	    screenshots("Complete Chekout for logged users");
@@ -465,14 +449,5 @@ public class CN_dellcu extends wrapper_Cucumber{
 	    explicitywait(50,"xpath",elements.getProperty("acceptalert"));
 	    clickelement("xpath",elements.getProperty("acceptalert"));
 	    waiting(5000);
-	    
-	    
-	    
     }
-//    @After
-//    public void teardown() {
-//  
-//        driver.quit();
-//    }
-////    
 }
