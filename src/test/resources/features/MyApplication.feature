@@ -14,7 +14,6 @@ Feature: Test the AU and CN DELL SITE
     And checking the Checkout guest functionalities values are "gnanathesigan1@gmail.com" and "FirstName" and "LastName" and "Address" and "City" and "1234" and "Ameex" and "8940928635" and "570"
     Then checking the Checkout login functionalities values are "Address" and "City" and "1234" and "Ameex" and "8940928635" and "570"
     
-    
      Examples: 
       | ausite                              |
       | https://www.dell.com/en-au/outlet   |
