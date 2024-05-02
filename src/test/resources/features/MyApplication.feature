@@ -50,7 +50,6 @@ Feature: Test the AU and CN DELL SITE
   Given checking the brazil search page functionalities.
   When checking the brazil PDP functionalities.
   And checking the brazil Checkout guest functionalities values are "gnanathesigan1@gmail.com" and "FirstName" and "MiddleName" and "LastName" and "Address" and "1234567890" and "Complement" and "Neightborhood" and "City" and "500" and "89409286" and "8940928635" and "3"
-  Then checking the brazil Checkout login functionalities values are "Address" and "1234567890" and "Complement" and "Neightborhood" and "City" and "500" and "89409286" and "8940928635" and "3"
   
   
   Examples: 
