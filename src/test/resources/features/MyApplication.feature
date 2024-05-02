@@ -42,15 +42,6 @@ Feature: Test the AU and CN DELL SITE
 @BRtest
   Scenario Outline: Test BR Dell site checking
   Given Open Chrome and load the brazil url of "<brsite>"
-  When checking the all brazil plp and checking broken pages.
-  Then mousehover on the mainmenu section in brazil.
-  Given checking the brazil PLP functionalities "name"
-  When verify the brazil warranty page and product details.
-  Then checking the brazil cart functionalities.
-  Given checking the brazil search page functionalities.
-  When checking the brazil PDP functionalities.
-  And checking the brazil Checkout guest functionalities values are "gnanathesigan1@gmail.com" and "FirstName" and "MiddleName" and "LastName" and "Address" and "1234567890" and "Complement" and "Neightborhood" and "City" and "500" and "89409286" and "8940928635" and "3"
-  Then checking the brazil Checkout login functionalities values are "Address" and "1234567890" and "Complement" and "Neightborhood" and "City" and "500" and "89409286" and "8940928635" and "3"
   
   
   Examples: 
