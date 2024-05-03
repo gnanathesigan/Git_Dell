@@ -511,7 +511,7 @@ public class wrapper_Cucumber {
     //Hovering on main menu
     actions.moveToElement(mainMenu).perform();
     //build()- used to compile all the actions into a single step 
-   // actions.click().build().perform();
+   actions.click().build().perform();
   }
   
     public void checkstatus(Method m, ITestResult result) throws Exception
